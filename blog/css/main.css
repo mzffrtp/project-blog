@@ -1,0 +1,153 @@
+.mainContainer {
+    padding:50px;
+    width: 100%;
+    min-height: calc(100vh - 75px) ;
+    display: flex;
+    gap: 10px;
+    background-color: azure
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .leftside {
+    flex: 1;
+    max-height: 40vh;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 0px 10px 0px #65647c;
+    overflow-y: scroll;
+    background-color:cornsilk;
+  }
+
+  .categoriesTitleContainer{
+    padding: 10px 15px; 
+    font-weight: 600;
+    border-bottom: 2px solid rgb(190, 134, 243);
+    color:#555;
+    font-size: 1.6rem;;
+  }
+
+  .categoriesList li{
+    padding:10px 25px;
+    border-bottom: 1.5px solid plum;
+    color:darkgray;
+  }
+
+  .categoriesList li a{
+    color:black;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .categoriesList li:hover{
+    background-color:rgb(185, 244, 65);
+    
+  }
+
+  .categoriesList li a:hover {
+    font-size: 1.5rem;
+  }
+  .rightside {
+    flex:3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.cardContainer {
+    width: 45%;
+    padding: 10px;
+    min-height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 0 pink;
+
+}
+
+.imgContainer{
+    width: 100%; 
+    height: 150px;
+}
+
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.imgContainer img:hover{
+  opacity: 0.8;
+  
+}
+.blogTitle{
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.blogSummary{
+    color: #555;
+}
+
+.cardBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.cardbtn {
+  border:none;
+  padding: 5px 20px;
+  background-color: yellowgreen;
+  cursor: progress;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cardbtn:hover{
+  box-shadow: 0px 0px 10px 0px yellow ;
+}
+
+@media screen and (min-width: 1100px) {
+  .rightside {
+    flex:6;
+  }
+
+  .cardContainer{
+    width:25%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rightside{
+    flex:2;
+  }
+
+  .cardContainer{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+}
