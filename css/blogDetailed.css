@@ -1,0 +1,51 @@
+.blogDetailedMainContainer {
+    width: 100%;
+    min-height: calc(100vh-75px);
+}
+
+.blogDetailedImgContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.blogDetailedImgContainer img{
+    width: 50%;
+}
+
+.blogDetailedTitle {
+    text-align: center;
+}
+
+.blogContentContainer {
+padding: 30px 50px;
+}
+
+.blogContentContainer p {
+    text-align: justify;
+    padding: 5px 0;
+}
+
+.authorInfoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px 0px;
+}
+
+@media screen and (min-width: 1100px) {
+    .blogDetailedImgContainer img{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogDetailedImgContainer img{
+        width: 100%;
+    }
+
+    .blogDetailedImgContainer{
+        padding: 15px;
+    }
+}
