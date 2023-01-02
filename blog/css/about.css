@@ -53,10 +53,13 @@
 }
 
 .infosRightContainer{
-    border: 1px solid black;
-    flex: 1;
+    width: 100%;
     text-align: justify;
-    margin-right: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    overflow-x: hidden;
 }
 
 .infoLeftItemContainer{
@@ -77,4 +80,86 @@
 
 .icon {
     font-size: 30px;
+}
+
+.projectCardMainContainer {
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.simpleProjectCardContainer {
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.simpleProjectCardImgContainer{
+    width: 200px;
+    height: 200px;
+}
+
+.simpleProjectCardImgContainer img{
+    width: 100%;
+}
+
+.simpleProjectCardTitle{
+    padding: 5px;
+}
+
+.simpleProjectCardDescription{
+    padding: 5px;
+}
+
+.simpleProjectCardLinkContainer{
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+}
+
+.simpleProjectCardLink{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: black;
+    background-color: rgb(243, 243, 149);
+}
+
+.simpleProjectCardLink:hover{
+    color:rgb(243, 243, 149);
+    background-color:black;
+}
+
+@media screen and (min-width:850px) {
+    .aboutMainContainer{
+        padding: 50px 200px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .descriptionContainer{
+        flex-direction: column;
+    }
+
+    .aboutInfosContainer{
+        flex-direction: column-reverse;
+    }
+
+    .infosLeftContainer{
+        width: 80%;
+        min-height: 50px;
+        margin: 10px auto;
+    }
+
+    .infoLeftItem i{
+        font-size: 50px;
+    }
+    .spanInfoLeftContainerItem{
+        font-size: 40px;
+    }
+    .infosRightContainer {
+        width: 100%;
+    }
+
+    
 }
