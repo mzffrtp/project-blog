@@ -15,6 +15,10 @@ const contactForm = document.getElementById("contactForm")
 const emailError = document.getElementById("emailError");
 const messageError = document.getElementById("messageError");
 
+const responseContainer=document.getElementById("responseContainer");
+const submitBtn = document.getElementById("submitBtn");
+const responseText = document.getElementById("responseText");
+
 nameInput.addEventListener("focusin",()=>{
     nameLabel.style.color ="black"
     nameLabel.style.fontSize ="1.5rem"
@@ -79,6 +83,10 @@ contactForm.addEventListener("submit",(event)=>{
         date: new Date()
     }
 
+    submitBtn.disabled = true;
+    submitBtn.classList.replace("submitBtnActive","submitBtnDisabled")
+    submitBtn.innerText = "In progress";
+
     fetch("http://localhost:3004/add-form", {
 
         method:"post",
@@ -92,9 +100,37 @@ contactForm.addEventListener("submit",(event)=>{
     .then(res=>res.json())
     .then(data=>{
         console.log(data)
-
+        if(data.status === 200) {
+            responseContainer.style.display = "block";
+            responseContainer.classList.add ("responseSuccess");
+            responseText.innerText = "Your message was submitted successfully."
+           setTimeout(() => {
+            responseContainer.style.display = "none";
+            responseContainer.classList.remove ("responseSuccess");
+            responseText.innerText = ""
+            submitBtn.disabled = false;
+            submitBtn.classList.replace("submitBtnDisabled","submitBtnActive")
+            submitBtn.innerText ="Submit";
+            nameInput.value = "";
+            lastname.value = "";
+            email.value = "";
+            message.value = "";
+           }, 3000);
+            
+        }
     })
     .catch(err=>{
         console.log(err)
+        responseContainer.style.display = "block";
+        responseContainer.classList.add ("responseFail");
+        responseText.innerText = "An error occured. Please try again"
+        setTimeout(() => {
+            responseContainer.style.display = "none";
+            responseContainer.classList.remove ("");
+            responseText.innerText = ""
+            submitBtn.disabled = false;
+            submitBtn.className.replace("submitBtnDisabled","submitBtnActive")
+            submitBtn.innerText ="Submit";
+           }, 3000);
     })
 })
