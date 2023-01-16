@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: honeydew;
+}
+
+.pageTitle {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid olivedrab;
+    border-radius: 10px;
+    background-color: rgb(212, 235, 240);
+}
+
+.queryContainer{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgb(237, 243, 141);
+    outline: none;
+    display: flex;
+    font-size: 1.5rem;
+    text-align: justify; 
+    
+}
+
+.queryContainer:hover{
+   
+    box-shadow: 0px 0px 20px 0px rgb(237, 243, 141);
+    transform: scale(1.025);
+   
+}
+.queryLeft, .queryRight{
+    padding: 10px;
+    flex: 1;
+}
+
+.queryRight{
+    border-left: 1px solid grey;
+}
+.queryLabel{
+    font-weight: bold;
+}
+
+.queryRow {
+    margin-bottom: 5px;
+}
+.queryRow a{
+    text-decoration: none;
+}
+
+.queryMessage{
+    padding: 5px;
+}
+
+#adminLoginPage {
+    display: flex;
+    justify-content: center;
+}
+
+#loginForm{
+    width: 50%;
+    padding: 10px;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.loginRow input {
+    width: 70%;
+    padding: 5px 10px;
+}
+
+.loginBtnContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.loginBtn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    color: blueviolet;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    padding: 10px 60px;
+}
+
+.loginErrorCon {
+    display: flex;
+    justify-content: center;
+   
+}
+#loginError {
+    margin-top: 20px;
+    color: coral;
+    margin: 20px 0px;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#toTop{
+  position: fixed;
+  right:50px;
+  bottom: 100px;  
+  z-index: 1000;
+  border: 1px solid rosybrown;
+  border-radius: 100%;
+  padding: 20px;
+  font-size: 1.5rem;
+  align-items: center;
+  background-color:rgb(235, 243, 125);
+  cursor: pointer;
+  display: none;
+}
+
+
